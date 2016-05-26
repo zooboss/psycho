@@ -25,7 +25,7 @@
         </div>
     </header>
     
-    <section class = "container">
+    <section class = "container intro">
         <div class = "row">
             <div class = "col-md-12">
                 <h1>INTRO</h1>
@@ -40,7 +40,7 @@
                     текст етксткт. текст текст. текст етксткт.
                     текст етксткт. текст текст.
                 </p>
-                <a href = "views/anastasiya" role = "button" class = "btn btn-block btn-primary btn-lg">Блог</a>
+                <a href = "veiws/personal.php" role = "button" class = "btn btn-block btn-primary btn-lg">Блог</a>
                 <!-- MODAL TRIGGER FOR NASTYA'S CONTACTS -->
                 <button type = "button" class = "btn btn-block btn-primary btn-lg" data-toggle = "modal" data-target = "#contacts_nastya">контакты</button>
                 <!-- MODAL TRIGGER FOR MAILTO -->
@@ -54,8 +54,8 @@
                     текст етксткт. текст текст. текст етксткт.
                     текст етксткт. текст текст.
                 </p>
-                <a href = "views/anastasiya" role = "button" class = "btn btn-block btn-primary btn-lg">Блог</a>
-                <!-- MODAL TRIGGER FOR NASTYA'S CONTACTS -->
+                <a href = "veiws/personal.php" role = "button" class = "btn btn-block btn-primary btn-lg">Блог</a>
+                <!-- MODAL TRIGGER FOR LUDA'S CONTACTS -->
                 <button type = "button" class = "btn btn-block btn-primary btn-lg" data-toggle = "modal" data-target = "#contacts_luda">контакты</button>
                 <!-- MODAL TRIGGER FOR MAILTO -->
                 <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto">оставить сообщение</button>
@@ -64,7 +64,7 @@
         </div>
     </section>
     
-    <section class = "container">
+    <section class = "container help">
         <div class = "row">
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
@@ -258,13 +258,19 @@
     <footer class = "container">
         <div class = "row">
             <div class = "col-lg-4 col-md-4 col-sm-4">
-                <h1>LIST</h1>
+                <h3>Психологи</h3>
+                <ul>
+                    <li><a href = "views/personal.php?type=a">Логвенкова Людмила Вальтеровна</a></li>
+                    <li><a href = "views/personal.php?type=b">Матенко Анастасия Геннадиевна</a></li>
+                </ul>
             </div>
             <div class = "col-lg-4 col-md-4 col-sm-4">
-                <h1>CONTACTS</h1>
+                <h3>Связаться с администрацией</h3>
+                <p><a href = "mailto:#">sandrozz@yandex.ru</a></p>
+                
             </div>
             <div class = "col-lg-4 col-md-4 col-sm-4">
-                <h1>NAME AND COPYRIGHT</h1>
+                <p class = "text-right">Название сайта &copy; 2016</p>
             </div>
         
         </div>

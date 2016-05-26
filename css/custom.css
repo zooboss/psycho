@@ -10,3 +10,7 @@
 .modal-dialog {
     background-color: white;
 }
+
+footer div.col-lg-4:nth-child(3){
+    margin-top: 10px;
+}
