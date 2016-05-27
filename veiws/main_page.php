@@ -63,8 +63,13 @@
             </div>
         </div>
     </section>
-    
+    <hr>
     <section class = "container help">
+        <div class = "row">
+            <div class = "col-md-12 text-center">
+                <h2>Психологические проблемы</h2>
+            </div>
+        </div>
         <div class = "row">
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
@@ -255,13 +260,13 @@
         </div>
     </section>
     
-    <footer class = "container">
-        <div class = "row">
+    <footer class = "container-fluid">
+        <div class = "row text-center">
             <div class = "col-lg-4 col-md-4 col-sm-4">
                 <h3>Психологи</h3>
-                <ul>
-                    <li><a href = "views/personal.php?type=a">Логвенкова Людмила Вальтеровна</a></li>
-                    <li><a href = "views/personal.php?type=b">Матенко Анастасия Геннадиевна</a></li>
+                <ul class="list-unstyled">
+                    <li><a href = "veiws/personal.php?type=a">Логвенкова Людмила Вальтеровна</a></li>
+                    <li><a href = "veiws/personal.php?type=b">Матенко Анастасия Геннадьевна</a></li>
                 </ul>
             </div>
             <div class = "col-lg-4 col-md-4 col-sm-4">
@@ -270,7 +275,8 @@
                 
             </div>
             <div class = "col-lg-4 col-md-4 col-sm-4">
-                <p class = "text-right">Название сайта &copy; 2016</p>
+                <h3></h3>
+                <p>Название сайта &copy; 2016</p>
             </div>
         
         </div>

@@ -1,4 +1,4 @@
-.container {
+/*.container {
     border: 1px solid red;
 }
 
@@ -6,11 +6,35 @@
     border: 1px dotted black;
     
 }
-
+*/
 .modal-dialog {
     background-color: white;
 }
 
-footer div.col-lg-4:nth-child(3){
-    margin-top: 10px;
+.img-circle {
+    padding: 15px;
 }
+
+section.help h2 {
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #252525;
+    color: darkgrey;
+}
+footer a {
+    color: darkgrey;
+}
+footer a:hover {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
