@@ -11,12 +11,12 @@
 </head>
 <body>
     
-    <header class = "container">
+    <header class = "container-fluid">
         <div class = "row">
             <div class = "col-md-3 col-sm-3 col-xs-3">
                 <h4>Психологический центр</h4>
             </div>
-            <div class = "col-md-6 col-sm-3 col-xs-3">
+            <div class = "col-md-6 col-sm-6 col-xs-6 text-center">
                 <h1>Название</h1>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3">
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class = "row">
-            <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class = "col-lg-5 col-md-5 col-sm-5 col-xs-12">
                 <img src = "images/nastya_smooth.jpg" class = "img-responsive img-circle center-block">
                 <p class = "lead text-justify">
                     информационный текст текст текст текст
@@ -46,7 +46,7 @@
                 <!-- MODAL TRIGGER FOR MAILTO -->
                 <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto">оставить сообщение</button>
             </div>
-            <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class = "col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
                 <img src = "images/nastya_smooth.jpg" class = "img-responsive img-circle center-block">
                 <p class = "lead text-justify">
                     информационный текст текст текст текст
@@ -352,13 +352,26 @@
                     <h4 class = "modal-title">отправить сообщение Анастасии</h4>
                 </div>
                 <div class = "modal-body">
-                    <h1>MAILTO FORM WITH DB STORE</h1>
+                    <form method = "post">
+                        <div class = "form-group">
+                            <label for = "visitor_email">Электронная почта</label>
+                            <input type = "email" class = "form-control" id = "visitor_email" name = "visitor_email" placeholder = "электронная почта" required>
+                        </div>
+                        <div class = "form-group">
+                            <label for = "visitor_subject">Тема сообщения</label>
+                            <input type = "text" class = "form-control" id = "visitor_subject" name = "visitor_subject" placeholder = "тема сообщения" required>
+                        </div>
+                        <div class = "form-group">
+                            <label for = "visitor_message">Ваше сообщение</label>
+                            <textarea rows = "10" class = "form-control" id = "visitor_message" name = "visitor_message" placeholder = "ваше сообщение" required></textarea>
+                        </div>
+                    
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
-                    <button type = "button" class = "btn btn-success" data-dismiss = "modal" name = "mailto_nastya">отправить</button> 
+                    <button type = "submit" class = "btn btn-success"  name = "mailto_nastya">отправить</button> 
                 </div>
-                
+                    </form>
             </div>
         </div>
     </div>

@@ -7,6 +7,9 @@
     
 }
 */
+
+/*----------------Some Fixes-------------*/
+
 .modal-dialog {
     background-color: white;
 }
@@ -19,18 +22,33 @@ section.help h2 {
     padding-bottom: 10px;
 }
 
+/*--------------Footer-------------------*/
+
 footer {
-    background-color: #252525;
-    color: darkgrey;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: white;
 }
 footer a {
-    color: darkgrey;
+    color: white;
 }
 footer a:hover {
-    color: lightgrey;
+    color: darkgrey;
     text-decoration: none;
 }
 
+/*------------body----------------*/
+
+header {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: white;
+    
+}
 
 
 
