@@ -76,7 +76,7 @@
         <div class = "row">
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -99,7 +99,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -122,7 +122,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -145,7 +145,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -170,7 +170,7 @@
         <div class = "row">
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -193,7 +193,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -216,7 +216,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -239,7 +239,7 @@
             </div>
             <div class = "col-md-3 col-sm-6">
                 <div class = "panel panel-info">
-                    <div class = "panel-heading">
+                    <div class = "panel-heading text-center">
                         <h3>Проблемы одиночества</h3>
                     </div>
                     <div class = "panel-body">
@@ -372,7 +372,7 @@
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
-                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="loadDoc()">Отправить</button> 
+                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="mailtoSuccess()">Отправить</button> 
                 </div>
                     
             </div>

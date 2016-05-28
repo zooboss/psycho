@@ -1,4 +1,3 @@
-
         <div class = "modal-dialog">
             <div class = "modal_content">
                 <div class = "modal-header">
@@ -10,16 +9,10 @@
                     <h1>Спасибо за ваше сообщение!</h1>
                 </div>
                 <div class = "modal-footer">
-                    <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
+                    <button type = "button" class = "btn btn-default" data-dismiss = "modal" onclick = "mailtoDefault()">Закрыть</button>
                      
                 </div>
                     
             </div>
         </div>
     
-
-<h1>
-<?php
-echo "hello, world";
-?>
-</h1>
