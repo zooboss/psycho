@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="libraries/css/bootstrap.css">
     <script rel = "text/javascript" src = "libraries/js/jquery-2.2.4.js"></script>
     <script rel="text/javascript" src="libraries/js/bootstrap.js"></script>
+    <script rel = "text/javascript" src = "js/main.js"></script>
+    <script rel = "text/javascript" src = "js/ajax.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    
+    <a href = "">
     <header class = "container-fluid">
         <div class = "row">
             <div class = "col-md-3 col-sm-3 col-xs-3">
@@ -24,7 +26,8 @@
             </div>
         </div>
     </header>
-    
+    </a>
+        
     <section class = "container intro">
         <div class = "row">
             <div class = "col-md-12">
@@ -295,7 +298,7 @@
                 </div>
                 <div class = "modal-body">
                     <adress>
-                        <abbr title = "Мобильный номер"></abbr>+7 (123) 123-3243 <br>
+                        <span data-toggle = "tooltip" title = "Мобильный номер" data-placement = "bottom">Номер: </span>+7 (123) 123-3243 <br>
                     </adress>
                     <br>
                     <adress>
@@ -324,7 +327,7 @@
                 </div>
                 <div class = "modal-body">
                     <adress>
-                        <abbr title = "Мобильный номер"></abbr>+7 (123) 123-3243 <br>
+                        <span data-toggle = "tooltip" title = "Мобильный номер" data-placement = "bottom">Номер: </span>+7 (123) 123-3243 <br>
                     </adress>
                     <br>
                     <adress>
@@ -352,24 +355,24 @@
                     <h4 class = "modal-title">отправить сообщение Анастасии</h4>
                 </div>
                 <div class = "modal-body">
-                    <form method = "post">
+                    <form method = "post" action="">
                         <div class = "form-group">
-                            <label for = "visitor_email">Электронная почта</label>
+                            <label for = "visitor_email"><span data-toggle = "tooltip" data-placement = "right" title = "Укажите вашу электронную почту">Электронная почта</span></label>
                             <input type = "email" class = "form-control" id = "visitor_email" name = "visitor_email" placeholder = "электронная почта" required>
                         </div>
                         <div class = "form-group">
-                            <label for = "visitor_subject">Тема сообщения</label>
+                            <label for = "visitor_subject"><span data-toggle = "tooltip" data-placement = "right" title = "Укажите тему вашего сообщения">Тема сообщения</span></label>
                             <input type = "text" class = "form-control" id = "visitor_subject" name = "visitor_subject" placeholder = "тема сообщения" required>
                         </div>
                         <div class = "form-group">
-                            <label for = "visitor_message">Ваше сообщение</label>
+                            <label for = "visitor_message"><span data-toggle = "tooltip" data-placement = "right" title = "Постарайтесь полно и подробно описать вашу проблему">Ваше сообщение</span></label>
                             <textarea rows = "10" class = "form-control" id = "visitor_message" name = "visitor_message" placeholder = "ваше сообщение" required></textarea>
                         </div>
                     
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
-                    <button type = "submit" class = "btn btn-success"  name = "mailto_nastya">отправить</button> 
+                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="loadDoc()">Отправить</button> 
                 </div>
                     </form>
             </div>
