@@ -368,13 +368,13 @@
                             <label for = "visitor_message"><span data-toggle = "tooltip" data-placement = "right" title = "Постарайтесь полно и подробно описать вашу проблему">Ваше сообщение</span></label>
                             <textarea rows = "10" class = "form-control" id = "visitor_message" name = "visitor_message" placeholder = "ваше сообщение" required></textarea>
                         </div>
-                    
+                    </form>
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
                     <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="loadDoc()">Отправить</button> 
                 </div>
-                    </form>
+                    
             </div>
         </div>
     </div>

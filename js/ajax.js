@@ -9,7 +9,8 @@ function loadDoc()
         }
     };
     
-    Request.open("POST", "ajax_mailto_success.txt", true);
+    Request.open("POST", "ajax_mailto_success.php", true);
+    Request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     Request.send();
     
     
