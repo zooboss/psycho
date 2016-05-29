@@ -355,7 +355,7 @@
                     <h4 class = "modal-title">отправить сообщение Анастасии</h4>
                 </div>
                 <div class = "modal-body">
-                    <form method = "post" action="">
+                    <form method = "post" action="models/custom_mailto.php">
                         <div class = "form-group">
                             <label for = "visitor_email"><span data-toggle = "tooltip" data-placement = "right" title = "Укажите вашу электронную почту">Электронная почта</span></label>
                             <input type = "email" class = "form-control" id = "visitor_email" name = "visitor_email" placeholder = "электронная почта" required>
@@ -372,7 +372,7 @@
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
-                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="mailtoSuccess();">Отправить</button> 
+                    <button type = "button" class = "btn btn-success"  name = "submit" id = "submit" onclick="mailtoSuccess();">Отправить</button> 
                                         
                 </div>
                     

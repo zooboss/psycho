@@ -1,7 +1,23 @@
 //Успешная отправка сообщения на электронную почту
 function mailtoSuccess()
 {
-     var Request_mailto = new XMLHttpRequest();
+    //ОТПРАВКА ФОРМЫ
+    $.ajax({
+        type: "POST",
+        url: "models/custom_mailto.php",
+        data: $('form').serialize(),
+        success: function(msg){
+            console.log(msg);
+        },
+        error: function(){
+            console.log("failure");
+        }
+    });
+    
+    
+    
+    
+    /* var Request_mailto = new XMLHttpRequest();
     Request_mailto.onreadystatechange = function()
     {
         if (Request_mailto.readyState == 4 && Request_mailto.status == 200)
@@ -13,7 +29,7 @@ function mailtoSuccess()
     
     Request_mailto.open("POST", "models/custom_mailto.php", true);
     Request_mailto.send("name_index=name");
-    
+    */
     var Request = new XMLHttpRequest();
     Request.onreadystatechange = function()
     {

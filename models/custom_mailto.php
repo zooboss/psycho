@@ -3,7 +3,7 @@
 function custom_mailto()
 {
     $myfile = fopen("testfile.txt", "w"); 
-    $txt = var_dump($_POST);
+    $txt = (isset($_POST)) ? $_POST['visitor_email'] : NULL;
     fwrite($myfile, $txt);
     fclose($myfile);
 }
