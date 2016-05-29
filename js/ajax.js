@@ -1,7 +1,7 @@
 //Успешная отправка сообщения на электронную почту
 function mailtoSuccess()
 {
-    //ОТПРАВКА ФОРМЫ
+    //ОТПРАВКА ФОРМЫ И ВЫЗОВ ФАЙЛА
     $.ajax({
         type: "POST",
         url: "models/custom_mailto.php",
@@ -14,7 +14,8 @@ function mailtoSuccess()
         }
     });
     
-        
+    //вызов блока сообщения об успехе
+    
     var Request = new XMLHttpRequest();
     Request.onreadystatechange = function()
     {
@@ -30,11 +31,7 @@ function mailtoSuccess()
     Request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     Request.send();
     
-    //вызов файла с функцией отправки сообщения на электронную почту
-    
-   
-    
-    
+        
 }
 
 //возврат дефолтного окна отправки сообщения на электронную почту после успешно отправленного сообщения
