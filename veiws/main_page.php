@@ -47,7 +47,7 @@
                 <!-- MODAL TRIGGER FOR NASTYA'S CONTACTS -->
                 <button type = "button" class = "btn btn-block btn-primary btn-lg" data-toggle = "modal" data-target = "#contacts_nastya">контакты</button>
                 <!-- MODAL TRIGGER FOR MAILTO -->
-                <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto">оставить сообщение</button>
+                <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto" onclick = "mailto_index('nastya')">оставить сообщение</button>
             </div>
             <div class = "col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
                 <img src = "images/nastya_smooth.jpg" class = "img-responsive img-circle center-block">
@@ -61,7 +61,7 @@
                 <!-- MODAL TRIGGER FOR LUDA'S CONTACTS -->
                 <button type = "button" class = "btn btn-block btn-primary btn-lg" data-toggle = "modal" data-target = "#contacts_luda">контакты</button>
                 <!-- MODAL TRIGGER FOR MAILTO -->
-                <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto">оставить сообщение</button>
+                <button type = "button" class = "btn btn-block btn-success btn-lg" data-toggle = "modal" data-target = "#mailto" onclick = "mailto_index('luda')">оставить сообщение</button>
             </div>
             </div>
         </div>
@@ -283,7 +283,7 @@
             </div>
         
         </div>
-    
+   
     </footer>
     
     
@@ -372,7 +372,8 @@
                 </div>
                 <div class = "modal-footer">
                     <button type = "button" class = "btn btn-default" data-dismiss = "modal">Закрыть</button>
-                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="mailtoSuccess()">Отправить</button> 
+                    <button type = "button" class = "btn btn-success"  name = "mailto_nastya" onclick="mailtoSuccess();">Отправить</button> 
+                                        
                 </div>
                     
             </div>

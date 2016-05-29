@@ -1,6 +1,19 @@
 //Успешная отправка сообщения на электронную почту
 function mailtoSuccess()
 {
+     var Request_mailto = new XMLHttpRequest();
+    Request_mailto.onreadystatechange = function()
+    {
+        if (Request_mailto.readyState == 4 && Request_mailto.status == 200)
+        {
+            console.log("Hello, World!");
+        }
+    };
+    
+    
+    Request_mailto.open("POST", "models/custom_mailto.php", true);
+    Request_mailto.send("name_index=name");
+    
     var Request = new XMLHttpRequest();
     Request.onreadystatechange = function()
     {
@@ -10,9 +23,17 @@ function mailtoSuccess()
         }
     };
     
+    mailto_index();
+    
     Request.open("POST", "veiws/ajax_mailto_success.php", true);
     Request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     Request.send();
+    
+    //вызов файла с функцией отправки сообщения на электронную почту
+    
+   
+    
+    
 }
 
 //возврат дефолтного окна отправки сообщения на электронную почту после успешно отправленного сообщения
