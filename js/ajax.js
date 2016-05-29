@@ -5,7 +5,7 @@ function mailtoSuccess()
     $.ajax({
         type: "POST",
         url: "models/custom_mailto.php",
-        data: $('form').serialize(),
+        data: $('form').serialize()+'&name_index' + '=' + global_name,
         success: function(msg){
             console.log(msg);
         },
@@ -14,22 +14,7 @@ function mailtoSuccess()
         }
     });
     
-    
-    
-    
-    /* var Request_mailto = new XMLHttpRequest();
-    Request_mailto.onreadystatechange = function()
-    {
-        if (Request_mailto.readyState == 4 && Request_mailto.status == 200)
-        {
-            console.log("Hello, World!");
-        }
-    };
-    
-    
-    Request_mailto.open("POST", "models/custom_mailto.php", true);
-    Request_mailto.send("name_index=name");
-    */
+        
     var Request = new XMLHttpRequest();
     Request.onreadystatechange = function()
     {
