@@ -53,12 +53,32 @@
         });
         
         var ArticleList = React.createClass({
+            getInitialState: function() {
+                return {
+                    displayedArticles: ARTICLES
+                };
+            },
+                
+            handleSearch: function(event) {
+                console.log(event.target.value);
+                var searchQuery = event.target.value.toLowerCase();
+                var displayedArticles = ARTICLES.filter(function(el){
+                    var searchValue = el.text.toLowerCase();
+                    return searchValue.indexOf(searchQuery) !== -1;
+                });
+                console.log(displayedArticles);
+                this.setState({
+                    displayedArticles: displayedArticles
+                });
+            },
+            
             render: function(){
                 return (
                     <div>
+                        <input type = "text" onChange = {this.handleSearch}/>
                         <ul>
                            {
-                                ARTICLES.map(function(el){
+                                this.state.displayedArticles.map(function(el){
                                     return <Article 
                                                 key   = {el.id} 
                                                 title = {el.title}
