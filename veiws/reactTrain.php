@@ -45,7 +45,10 @@
         var Article = React.createClass({
             render: function()
             {
-                return (<li> {this.props.title} </li>);
+                return (<li> 
+                            <div>{this.props.title}</div>
+                            <div>{this.props.text}</div> 
+                        </li>);
             }
         });
         
@@ -56,7 +59,10 @@
                         <ul>
                            {
                                 ARTICLES.map(function(el){
-                                    return <li> {el.title} </li>;
+                                    return <Article 
+                                                key   = {el.id} 
+                                                title = {el.title}
+                                                text  = {el.text} />;
                                     
 
 
