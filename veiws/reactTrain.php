@@ -23,14 +23,53 @@
     </div>
     
     <script type="text/babel">
-        var HelloWorld = React.createClass({
+       
+       var ARTICLES = [
+           {
+            id: 0,
+            title: "title0",
+            text: "text0"
+        },
+         {
+            id: 1,
+            title: "title1",
+            text: "text1"
+        },
+         {
+            id: 2,
+            title: "title2",
+            text: "text2"
+        }
+       ];
+       
+        var Article = React.createClass({
             render: function()
             {
-                return <h1> Hello, World! </h1>;
+                return (<li> {this.props.title} </li>);
             }
         });
+        
+        var ArticleList = React.createClass({
+            render: function(){
+                return (
+                    <div>
+                        <ul>
+                           {
+                                ARTICLES.map(function(el){
+                                    return <li> {el.title} </li>;
+                                    
+
+
+                                })
+                            }
+                        </ul>
+                    </div>
+                )
+            }
+        });
+        
         ReactDOM.render(
-            <HelloWorld />,
+            <ArticleList />,
             document.getElementById("content")
         );
     
