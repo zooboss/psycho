@@ -119,17 +119,31 @@
             text: 'Бесплатно. Скачать. Лучший сайт - http://localhost:3000'
         }
     ];
+//компонент отдельной новости
+    var Article = React.createClass({
+        render: function(){
+            return(
+                    <div className="article">
+                       <p className="news__author"> { this.props.data.author }: </p>
+                       <p className="news__text"> { this.props.data.text } </p>
+                    </div>
+            )
+        }
+    });
+
 //Класс ренреда новостей
     var News = React.createClass({
         render: function(){
+            //принимает значение массива новостей
             var data = this.props.data;
+            //новый массив с html структурой элементов массива data
             var newsTemplate = [];
             if ( data.length > 0 ) {
                     newsTemplate = data.map(function (item, index) {
                     return (
                             <div key={index}>
-                                <p> { item.author }:</p>
-                                <p> { item.text } </p>
+                                {/* преобразует массив с помощью Article */}
+                                <p> <Article data={ item } /> </p>
                             </div>
                     );
                 });

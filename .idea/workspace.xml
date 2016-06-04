@@ -38,8 +38,8 @@
       <file leaf-file-name="reactTrain.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="161" column="26" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+            <state relative-caret-position="227">
+              <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
               <folding>
                 <element signature="e#948#2989#0" expanded="false" />
               </folding>
@@ -67,8 +67,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="629" />
-    <option name="y" value="48" />
+    <option name="x" value="717" />
+    <option name="y" value="114" />
     <option name="width" value="1400" />
     <option name="height" value="992" />
   </component>
@@ -242,12 +242,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464995542290</updated>
-      <workItem from="1464995544983" duration="17451000" />
+      <workItem from="1464995544983" duration="18631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17451000" />
+    <option name="totallyTimeSpent" value="18631000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -259,7 +259,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="629" y="48" width="1400" height="992" extended-state="0" />
+    <frame x="717" y="114" width="1400" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18980798" sideWeight="0.495338" order="0" side_tool="false" content_ui="combo" />
@@ -330,7 +330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2739">
+        <state relative-caret-position="754">
           <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding />
         </state>
@@ -338,8 +338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="161" column="26" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+        <state relative-caret-position="227">
+          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
           <folding>
             <element signature="e#948#2989#0" expanded="false" />
           </folding>
