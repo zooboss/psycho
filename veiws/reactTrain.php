@@ -108,24 +108,50 @@
     var my_news = [
         {
             author: 'Саша Печкин',
-            text: 'В четчерг, четвертого числа...'
+            text: 'В четчерг, четвертого числа...',
+            bigText: 'в четыре с четвертью часа четыре чёрненьких чумазеньких чертёнка чертили чёрными чернилами чертёж.'
         },
         {
             author: 'Просто Вася',
-            text: 'Считаю, что $ должен стоить 35 рублей!'
+            text: 'Считаю, что $ должен стоить 35 рублей!',
+            bigText: 'А евро 42!'
         },
         {
             author: 'Гость',
-            text: 'Бесплатно. Скачать. Лучший сайт - http://localhost:3000'
+            text: 'Бесплатно. Скачать. Лучший сайт - http://localhost:3000',
+            bigText: 'На самом деле платно, просто нужно прочитать очень длинное лицензионное соглашение'
         }
     ];
 //компонент отдельной новости
     var Article = React.createClass({
+        //по дефолту bigText невидим, а ссылка "подробнее" видима
+        getInitialState: function(){
+            return {
+                visible: false
+            }
+        },
+
+        //Функция-обработчик клика: смена состояния visible
+        readmoreClick: function(e){
+            e.preventDefault();
+            console.log(e);
+            this.setState({visible: true});
+        },
+
+        //HTML структура вывода компонента
         render: function(){
+            var visible = this.state.visible;
+            console.log( 'render', this );
             return(
                     <div className="article">
                        <p className="news__author"> { this.props.data.author }: </p>
                        <p className="news__text"> { this.props.data.text } </p>
+                       <a href='#'
+                          onClick={ this.readmoreClick }
+                          className={ "news_readmore " + ((visible === false) ? "" : "none" ) }>
+                            Подробнее
+                       </a>
+                       <p className={ "news__text " + ((visible !== false) ? "" : "none" ) }> { this.props.data.bigText } </p>
                     </div>
             )
         }
@@ -133,6 +159,18 @@
 
 //Класс ренреда новостей
     var News = React.createClass({
+        //Количество кликов по блоку новости Counter
+        getInitialState: function(){
+            return {
+                counter: 0
+            }
+        },
+        //автоинкремент счетчика кликов по вызову обработчика
+        counterClick: function(event){
+            event.preventDefault();
+            this.setState({counter: ++this.state.counter});
+        },
+
         render: function(){
             //принимает значение массива новостей
             var data = this.props.data;
@@ -141,9 +179,9 @@
             if ( data.length > 0 ) {
                     newsTemplate = data.map(function (item, index) {
                     return (
-                            <div key={index}>
+                            <div key={ index } >
                                 {/* преобразует массив с помощью Article */}
-                                <p> <Article data={ item } /> </p>
+                                <Article data={ item } />
                             </div>
                     );
                 });
@@ -154,9 +192,9 @@
             console.log(newsTemplate);
 
             return(
-                    <div className="news">
+                    <div className="news" onClick={ this.counterClick }>
                         { newsTemplate }
-                        <h1 className={ data.length > 0 ? '' : "none" } > Число новостей: { data.length } </h1>
+                        <h1 className={ data.length > 0 ? '' : "none" } > Число кликов: { this.state.counter } </h1>
                     </div>
             );
         }
