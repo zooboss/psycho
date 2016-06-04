@@ -104,7 +104,7 @@
 
 <!-- Another train with reactJS -->
 <script type="text/babel">
-
+//Массив объектов новостей
     var my_news = [
         {
             author: 'Саша Печкин',
@@ -119,17 +119,7 @@
             text: 'Бесплатно. Скачать. Лучший сайт - http://localhost:3000'
         }
     ];
-
-    var Comments = React.createClass({
-        render: function(){
-            return(
-                    <div className="Comments">
-                        No news - no comments!
-                    </div>
-            );
-        }
-    });
-
+//Класс ренреда новостей
     var News = React.createClass({
         render: function(){
             var data = this.props.data;
@@ -157,19 +147,19 @@
             );
         }
     });
-
+//Класс вывода всех элементов (с передачей значений свойств
     var App = React.createClass({
       render: function () {
           return(
                   <div className="app">
                       Hello! I can do NEWS1!
                       <News data={ my_news } /> {/*added data prop */}
-                      <Comments />
+
                   </div>
           );
       }
     });
-
+//Рендер класса вывода App
     ReactDOM.render(
             <App />,
             document.getElementById('content')
