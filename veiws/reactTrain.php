@@ -194,17 +194,48 @@
             return(
                     <div className="news" onClick={ this.counterClick }>
                         { newsTemplate }
+                        <h1 className={ data.length > 0 ? '' : "none" } > Число новостей: { data.length } </h1>
                         <h1 className={ data.length > 0 ? '' : "none" } > Число кликов: { this.state.counter } </h1>
                     </div>
             );
         }
     });
+
+//Тестовый инпут
+    var TestInput = React.createClass({
+        //Базовое значение инпута - пустая строка
+        getInitialState: function(){
+            return{
+                MyValue: ''
+            }
+        },
+        //Обработчик ввода в инпут
+        changeHandler: function(e){
+            //Присваиевает свойству состояния значение, введенное в инпут
+            this.setState({
+                MyValue: e.target.value
+            });
+
+        },
+        //Рендер инпута с событием onChange -> вызов обработчика
+        render: function(){
+           return(
+                   <input className="test-input"
+                          value={ this.state.MyValue }
+                          onChange={ this.changeHandler }
+                          placeholder="введите ваше сообщение"
+                   />
+           );
+       }
+    });
+
 //Класс вывода всех элементов (с передачей значений свойств
     var App = React.createClass({
       render: function () {
           return(
                   <div className="app">
-                      Hello! I can do NEWS1!
+                      NEWS! <br />
+                      <TestInput />
                       <News data={ my_news } /> {/*added data prop */}
 
                   </div>
