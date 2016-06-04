@@ -104,10 +104,76 @@
 
 <!-- Another train with reactJS -->
 <script type="text/babel">
+
+    var my_news = [
+        {
+            author: 'Саша Печкин',
+            text: 'В четчерг, четвертого числа...'
+        },
+        {
+            author: 'Просто Вася',
+            text: 'Считаю, что $ должен стоить 35 рублей!'
+        },
+        {
+            author: 'Гость',
+            text: 'Бесплатно. Скачать. Лучший сайт - http://localhost:3000'
+        }
+    ];
+
+    var Comments = React.createClass({
+        render: function(){
+            return(
+                    <div className="Comments">
+                        No news - no comments!
+                    </div>
+            );
+        }
+    });
+
+    var News = React.createClass({
+        render: function(){
+            var data = this.props.data;
+            var newsTemplate = [];
+            if ( data.length > 0 ) {
+                    newsTemplate = data.map(function (item, index) {
+                    return (
+                            <div key={index}>
+                                <p> { item.author }:</p>
+                                <p> { item.text } </p>
+                            </div>
+                    );
+                });
+            }
+            else {
+                    newsTemplate = <p> no news :( </p>;
+            }
+            console.log(newsTemplate);
+
+            return(
+                    <div className="news">
+                        { newsTemplate }
+                        <h1 className={ data.length > 0 ? '' : "none" } > Число новостей: { data.length } </h1>
+                    </div>
+            );
+        }
+    });
+
+    var App = React.createClass({
+      render: function () {
+          return(
+                  <div className="app">
+                      Hello! I can do NEWS1!
+                      <News data={ my_news } /> {/*added data prop */}
+                      <Comments />
+                  </div>
+          );
+      }
+    });
+
     ReactDOM.render(
-            React.createElement('h1', null, 'Hello, World'),
+            <App />,
             document.getElementById('content')
-    )
+    );
 
 
 </script>
