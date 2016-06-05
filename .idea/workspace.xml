@@ -38,8 +38,8 @@
       <file leaf-file-name="reactTrain.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="248" column="41" selection-start-line="248" selection-start-column="41" selection-end-line="248" selection-end-column="41" />
+            <state relative-caret-position="395">
+              <caret line="252" column="70" selection-start-line="252" selection-start-column="70" selection-end-line="252" selection-end-column="70" />
               <folding>
                 <element signature="e#948#2989#0" expanded="false" />
               </folding>
@@ -252,12 +252,12 @@
       <option name="presentableId" value="Default" />
       <updated>1464995542290</updated>
       <workItem from="1464995544983" duration="18631000" />
-      <workItem from="1465135120636" duration="9399000" />
+      <workItem from="1465135120636" duration="9537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39389000" />
+    <option name="totallyTimeSpent" value="39527000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,7 +269,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1358351" sideWeight="0.495338" order="0" side_tool="false" content_ui="combo" />
@@ -460,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="248" column="41" selection-start-line="248" selection-start-column="41" selection-end-line="248" selection-end-column="41" />
+        <state relative-caret-position="395">
+          <caret line="252" column="70" selection-start-line="252" selection-start-column="70" selection-end-line="252" selection-end-column="70" />
           <folding>
             <element signature="e#948#2989#0" expanded="false" />
           </folding>

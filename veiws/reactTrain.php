@@ -251,6 +251,7 @@
                 RuleEmpty: !( this.refs.rules.checked ),
                 AuthorEmpty: !( this.refs.author.value.trim().length > 0 ),
                 TextEmpty: !( this.refs.text.value.trim().length > 0 )
+
             });
 
 
