@@ -218,7 +218,7 @@
         clickHandler: function(e){
             e.preventDefault();
             var message = ReactDOM.findDOMNode( this.refs.myTestInput ).value;
-            console.log( ReactDOM.findDOMNode( this.refs.myTestInput ) );
+            console.log( this.refs );
             window.alert( message );
         },
 
@@ -233,7 +233,7 @@
                               placeholder   ="введите ваше сообщение"
                               ref           ="myTestInput"
                        />
-                       <button className="btn btn-success btn-lg" onClick={ this.clickHandler }> Alert </button>
+                       <button className="btn btn-success btn-lg" onClick={ this.clickHandler } ref="alert-button"> Alert </button>
                    </div>
            );
        }
