@@ -218,13 +218,17 @@
 //Свойство для кнопки alert
         getInitialState: function(){
             return{
-                disabled: true
+                disabled: true,
+                AuthorEmpty: true,
+                TextEmpty: true,
+                RuleEmpty: true
             }
         },
 
 //Автофокус, условие - компонент смонтирован
         componentDidMount: function(){
             ReactDOM.findDOMNode( this.refs.author ).focus();
+            console.log( this.state );
         },
 
 //тестовый onClick handler
@@ -237,12 +241,26 @@
 
 //Обработчик чекбокса
         clickRuleHandler: function(e){
-            this.setState({ disabled: !e.target.checked });
-            this.setState.disabled = !e.target.checked;
+            this.setState({ RuleEmpty: !e.target.checked });
+
+        },
+
+//Проверка заполнения полей
+        onChangeTextAuthorRule: function(){
+            this.setState({
+                RuleEmpty: !( this.refs.rules.checked ),
+                AuthorEmpty: !( this.refs.author.value.trim().length > 0 ),
+                TextEmpty: !( this.refs.text.value.trim().length > 0 )
+            });
+
+
         },
 
         //Рендер инпута с событием onChange -> вызов обработчика || измененно на некотролируемый компонент
         render: function(){
+            var RuleIsEmpty = this.state.RuleEmpty,
+                AuthorIsEmpty = this.state.AuthorEmpty,
+                TextIsEmpty = this.state.TextEmpty;
            return(
                    <form className="add cf">
                        <label htmlFor="author-input"> Ваше имя </label>
@@ -252,6 +270,7 @@
                               defaultValue  =''
                               placeholder   ="Ваше имя"
                               ref           ="author"
+                              onChange      ={ this.onChangeTextAuthorRule }
                        />
                        <label htmlFor="message">Сообщение</label>
                        <textarea className    ="add__text"
@@ -260,13 +279,14 @@
                                  placeholder  ='Текст новости'
                                  rows         ='5'
                                  ref          ='text'
+                                 onChange      ={ this.onChangeTextAuthorRule }
                        >
                        </textarea>
                        <label className    ="add__checkrule">
                            <input type     ="checkbox"
                                   id       ="rules"
                                   ref      ="rules"
-                                  onClick  ={ this.clickRuleHandler }
+                                  onClick  ={ this.onChangeTextAuthorRule }
                            />
                            Я согласен с правилами
                        </label>
@@ -274,7 +294,7 @@
                        <button className   ='add__btn'
                                onClick     ={ this.clickAlertHandler }
                                ref         ="alertButton"
-                               disabled    ={ this.state.disabled }
+                               disabled    ={ RuleIsEmpty || TextIsEmpty || AuthorIsEmpty }
                        >
                        Alert
                        </button>
