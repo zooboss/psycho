@@ -199,7 +199,7 @@
     });
 
 //Тестовый инпут
-    var TestInput = React.createClass({
+    var Add = React.createClass({
         //Базовое значение инпута - пустая строка
 /*        getInitialState: function(){
             return{
@@ -214,27 +214,71 @@
             });
 
         }, */
+
+//Свойство для кнопки alert
+        getInitialState: function(){
+            return{
+                disabled: true
+            }
+        },
+
+//Автофокус, условие - компонент смонтирован
+        componentDidMount: function(){
+            ReactDOM.findDOMNode( this.refs.author ).focus();
+        },
+
 //тестовый onClick handler
-        clickHandler: function(e){
+        clickAlertHandler: function(e){
             e.preventDefault();
-            var message = ReactDOM.findDOMNode( this.refs.myTestInput ).value;
-            console.log( this.refs );
-            window.alert( message );
+            var message = this.refs.text.value;
+            var author = this.refs.author.value;
+            alert( author + '\n' + message );
+        },
+
+//Обработчик чекбокса
+        clickRuleHandler: function(e){
+            this.setState({ disabled: !e.target.checked });
+            this.setState.disabled = !e.target.checked;
         },
 
         //Рендер инпута с событием onChange -> вызов обработчика || измененно на некотролируемый компонент
         render: function(){
            return(
-                   <div className="test-form">
-                       <input className     ="test-input"
-                              id            ="test-input"
+                   <form className="add cf">
+                       <label htmlFor="author-input"> Ваше имя </label>
+                       <input className     ="form-control"
+                              type          ='text'
+                              id            ="author"
                               defaultValue  =''
-                              onChange      ={ this.changeHandler }
-                              placeholder   ="введите ваше сообщение"
-                              ref           ="myTestInput"
+                              placeholder   ="Ваше имя"
+                              ref           ="author"
                        />
-                       <button className="btn btn-success btn-lg" onClick={ this.clickHandler } ref="alert-button"> Alert </button>
-                   </div>
+                       <label htmlFor="message">Сообщение</label>
+                       <textarea className    ="add__text"
+                                 id           ="message"
+                                 defaultValue =''
+                                 placeholder  ='Текст новости'
+                                 rows         ='5'
+                                 ref          ='text'
+                       >
+                       </textarea>
+                       <label className    ="add__checkrule">
+                           <input type     ="checkbox"
+                                  id       ="rules"
+                                  ref      ="rules"
+                                  onClick  ={ this.clickRuleHandler }
+                           />
+                           Я согласен с правилами
+                       </label>
+                       <br />
+                       <button className   ='add__btn'
+                               onClick     ={ this.clickAlertHandler }
+                               ref         ="alertButton"
+                               disabled    ={ this.state.disabled }
+                       >
+                       Alert
+                       </button>
+                   </form>
            );
        }
     });
@@ -245,7 +289,7 @@
           return(
                   <div className="app">
                       NEWS! <br />
-                      <TestInput />
+                      <Add />
                       <News data={ my_news } /> {/*added data prop */}
 
                   </div>
