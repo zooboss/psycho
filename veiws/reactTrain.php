@@ -134,25 +134,23 @@
         //Функция-обработчик клика: смена состояния visible
         readmoreClick: function(e){
             e.preventDefault();
-            console.log(e);
             this.setState({visible: true});
         },
 
         //HTML структура вывода компонента
         render: function(){
             var visible = this.state.visible;
-            console.log( 'render', this );
             return(
-                    <div className="article">
-                       <p className="news__author"> { this.props.data.author }: </p>
-                       <p className="news__text"> { this.props.data.text } </p>
-                       <a href='#'
-                          onClick={ this.readmoreClick }
-                          className={ "news_readmore " + ((visible === false) ? "" : "none" ) }>
-                            Подробнее
-                       </a>
-                       <p className={ "news__text " + ((visible !== false) ? "" : "none" ) }> { this.props.data.bigText } </p>
-                    </div>
+                <div className="article">
+                   <p className="news__author"> { this.props.data.author }: </p>
+                   <p className="news__text"> { this.props.data.text } </p>
+                   <a href='#'
+                      onClick={ this.readmoreClick }
+                      className={ "news_readmore " + ((visible === false) ? "" : "none" ) }>
+                        Подробнее
+                   </a>
+                   <p className={ "news__text " + ((visible !== false) ? "" : "none" ) }> { this.props.data.bigText } </p>
+                </div>
             )
         }
     });
@@ -189,7 +187,6 @@
             else {
                     newsTemplate = <p> no news :( </p>;
             }
-            console.log(newsTemplate);
 
             return(
                     <div className="news" onClick={ this.counterClick }>
@@ -204,27 +201,40 @@
 //Тестовый инпут
     var TestInput = React.createClass({
         //Базовое значение инпута - пустая строка
-        getInitialState: function(){
+/*        getInitialState: function(){
             return{
                 MyValue: ''
             }
-        },
+        }, */
         //Обработчик ввода в инпут
-        changeHandler: function(e){
+/*        changeHandler: function(e){
             //Присваиевает свойству состояния значение, введенное в инпут
             this.setState({
                 MyValue: e.target.value
             });
 
+        }, */
+//тестовый onClick handler
+        clickHandler: function(e){
+            e.preventDefault();
+            var message = ReactDOM.findDOMNode( this.refs.myTestInput ).value;
+            console.log( ReactDOM.findDOMNode( this.refs.myTestInput ) );
+            window.alert( message );
         },
-        //Рендер инпута с событием onChange -> вызов обработчика
+
+        //Рендер инпута с событием onChange -> вызов обработчика || измененно на некотролируемый компонент
         render: function(){
            return(
-                   <input className="test-input"
-                          value={ this.state.MyValue }
-                          onChange={ this.changeHandler }
-                          placeholder="введите ваше сообщение"
-                   />
+                   <div className="test-form">
+                       <input className     ="test-input"
+                              id            ="test-input"
+                              defaultValue  =''
+                              onChange      ={ this.changeHandler }
+                              placeholder   ="введите ваше сообщение"
+                              ref           ="myTestInput"
+                       />
+                       <button className="btn btn-success btn-lg" onClick={ this.clickHandler }> Alert </button>
+                   </div>
            );
        }
     });

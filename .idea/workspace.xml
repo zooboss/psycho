@@ -38,8 +38,8 @@
       <file leaf-file-name="reactTrain.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="219" column="64" selection-start-line="219" selection-start-column="64" selection-end-line="219" selection-end-column="64" />
+            <state relative-caret-position="116">
+              <caret line="220" column="73" selection-start-line="220" selection-start-column="73" selection-end-line="220" selection-end-column="73" />
               <folding>
                 <element signature="e#948#2989#0" expanded="false" />
               </folding>
@@ -77,8 +77,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="647" />
-    <option name="y" value="94" />
+    <option name="x" value="431" />
+    <option name="y" value="68" />
     <option name="width" value="1400" />
     <option name="height" value="1014" />
   </component>
@@ -263,7 +263,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26037000" />
+    <option name="totallyTimeSpent" value="29164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,7 +275,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="647" y="94" width="1400" height="1014" extended-state="0" />
+    <frame x="431" y="68" width="1400" height="1014" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18980798" sideWeight="0.495338" order="0" side_tool="false" content_ui="combo" />
@@ -432,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/veiws/reactTrain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="219" column="64" selection-start-line="219" selection-start-column="64" selection-end-line="219" selection-end-column="64" />
+        <state relative-caret-position="116">
+          <caret line="220" column="73" selection-start-line="220" selection-start-column="73" selection-end-line="220" selection-end-column="73" />
           <folding>
             <element signature="e#948#2989#0" expanded="false" />
           </folding>
