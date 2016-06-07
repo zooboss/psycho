@@ -259,6 +259,7 @@
 
         //Рендер инпута с событием onChange -> вызов обработчика || измененно на некотролируемый компонент
         render: function(){
+
             var RuleIsEmpty = this.state.RuleEmpty,
                 AuthorIsEmpty = this.state.AuthorEmpty,
                 TextIsEmpty = this.state.TextEmpty;
